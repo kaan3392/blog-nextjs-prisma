@@ -34,7 +34,7 @@ async function preset(req, res) {
             expire: expire,
           },
         });
-        const tokenURL = `${process.env.NEXTAUTH_URL}/reset?token=${token}`
+        const tokenURL = `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/reset?token=${token}`
         const emailTemplate = `<h3>Reset Your Password</h3><p>This <a href="${tokenURL}" target="_blank"> link </a> will expire in 1 hour.</p>`
         sendMail({
           from: process.env.SMTP_USER,

@@ -36,7 +36,7 @@ async function register(req, res) {
         token: token
       },
     });
-    const tokenURL = `${process.env.NEXTAUTH_URL}/verify?token=${token}`
+    const tokenURL = `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/verify?token=${token}`
     const emailTemplate = `<h3>Verify Your Account</h3><p>This <a href="${tokenURL}" target="_blank"> link </a> will expire in 1 hour.</p><br><p>${tokenURL}</p>`
 
     sendMail({
