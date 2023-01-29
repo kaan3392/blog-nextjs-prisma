@@ -43,7 +43,7 @@ export default function Preset({  }) {
               Send me link
             </button>
             <Link href="/register">
-              <div className={styles.register}>I don't have an account</div>
+              <div className={styles.register}>I don&apos;t have an account</div>
             </Link>
           </form>
         </div>
