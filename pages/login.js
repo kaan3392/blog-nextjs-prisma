@@ -57,10 +57,10 @@ export default function Login({ providers, csrfToken }) {
               Login
             </button>
             <Link href="/preset">
-              <div className={styles.register}>I don't remember my password</div>
+              <div className={styles.register}>I don&apos;t remember my password</div>
             </Link>
             <Link href="/register">
-              <div className={styles.register}>I don't have an account</div>
+              <div className={styles.register}>I don&apos;t have an account</div>
             </Link>
           </form>
         </div>

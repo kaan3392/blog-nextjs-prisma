@@ -262,8 +262,8 @@ export default function Editor({post}) {
           </div>
           <div className={styles.tagsStuffWrapper}>
             <div className={styles.suggestedTags}>
-              {suggestedTags.map((tag) => {return(
-                <div className={styles.suggestedTag} onClick={() => addTag(tag)}>{tag}</div>
+              {suggestedTags.map((tag,i) => {return(
+                <div key={i} className={styles.suggestedTag} onClick={() => addTag(tag)}>{tag}</div>
               )})}
             </div>
             <input className={styles.tagSearch} placeholder="Search existing tags..." value={searchedTag} onChange={(e) => setSearchedTag(e.target.value)} />
