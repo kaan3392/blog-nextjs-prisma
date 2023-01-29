@@ -1,0 +1,9 @@
+.slideSplide:hover{
+    cursor: pointer;
+}
+
+.slideSplide:active{
+    cursor: grabbing;
+}
+
+

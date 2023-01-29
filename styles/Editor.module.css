@@ -1,0 +1,309 @@
+.App {
+    text-align: center;
+  }
+  
+  .tagsStuffWrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .tagSearch{
+    font-size: 13px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    color: black;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .suggestedTags {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.71);
+    position: absolute;
+    background-color: white;
+    transform: translate(0%, calc(-50% - 15px));
+  }
+
+  .suggestedTag {
+    z-index: 3;
+    padding: 0.1rem 0.3rem;
+    width: 100%;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .suggestedTag:hover {
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mainWrapper {
+    width: 100%;
+  }
+
+  .title{
+    font-size: 35px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    color: black;
+    width: 100%;
+    margin-bottom: 1rem;
+
+  }
+
+  .short{
+    margin-top: 1rem;
+    font-size: 13px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    color: black;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .embed{
+    font-size: 13px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    color: orange;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .story{
+    font-size: 16px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    color: black;
+    width: 100%;
+    margin-bottom: 1rem;
+    resize: none;
+    height: 200px;
+  }
+
+  .App_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 1.5vmin);
+    padding: 1rem;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .tags {
+    width: 100%;
+    gap: 0.5rem;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .tag {
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.71);
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .tag > svg {
+    width: 16px;
+    height: 16px;
+    fill: orangered;
+  }
+
+  .tag > svg:hover {
+    fill: orange;
+    cursor: pointer;
+  }
+
+  .buttonWrapper {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .save_button {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    border: 2px solid orangered;
+    background-color: orangered;
+    color: white;
+  }
+  .save_button:hover {
+    border: 2px solid orangered;
+    background-color: white;
+    color: orangered;
+    cursor: pointer;
+  }
+  .delete_button {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+  }
+  .delete_button:hover {
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+  }
+
+  .contents {
+    list-style: none;
+    width: 100%;
+    padding:  none ;
+  }
+  
+  .contents li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.71); 
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.71);
+    flex-direction: column;  
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contents> li>input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+  }
+  .contents> li>textarea {
+    width: 100%;
+    background-color: inherit;
+    color: black;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+  }
+
+  .card_title{
+    font-size: 25px;
+    color: black;
+  }
+  .card_embed{
+    font-size: 13px;
+    color: orangered;
+  }
+  .contents> li> div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+  }
+  .contents> li> div > svg  {
+    margin-left: auto;
+    width: 25px;
+    height: 25px;
+    fill: white;
+    border-radius: 5px;
+    background-color: orangered;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid orangered;
+    align-self: flex-start;
+  }
+  .contents> li> div > svg:hover  {
+    fill: orangered;
+    background-color: inherit;
+    
+  }
+
+  .contents li textarea{
+    resize: none;
+    min-height: 200px;
+    font-size: 16px;
+  }
+  
+  .contents p {
+    font-weight: bold;
+  }
+  
+  .contentsThumb {
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 2em;
+    height: 2em;
+    background-color: #e8e8e8;
+    padding: .5em;
+    margin-right: .5em;
+  }
+  
+  .contents-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom {
+    display: flex;
+    gap:1rem;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .bottom div{
+    flex-grow: 1;
+    border-bottom: 2px solid orangered;
+  }
+
+  .bottom svg{
+    width: 15px;
+    color: orangered;
+    cursor: pointer;
+    border: 2px solid orangered;
+    fill: orange;
+    background-color: inherit;
+    border-radius: 5px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid orangered;
+  }
+  .bottom svg:hover{
+   fill:white;
+   background-color: orangered;
+  }
+

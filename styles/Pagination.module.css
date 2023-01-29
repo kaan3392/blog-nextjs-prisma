@@ -1,0 +1,31 @@
+.wrapper{
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.pageButton {
+  padding: 5px 15px;
+}
+.pageButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: orange;
+  color: white;
+}
+
+.pageCurrent {
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  background-color: orangered;
+  border: 1px solid orangered;
+}

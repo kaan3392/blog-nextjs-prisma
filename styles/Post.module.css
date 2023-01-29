@@ -1,0 +1,43 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.title{
+    font-size: 47px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.imageCon{
+    width: 100%;
+}
+.image{
+    width: 100%;
+
+}
+
+.short{
+    font-size: 18px;
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.others .title{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+

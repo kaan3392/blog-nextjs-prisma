@@ -1,0 +1,124 @@
+.container{
+    height: calc(100vh - 150px) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper {
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .wrapper{
+        flex-direction: column;
+    }
+  }
+
+
+.iconWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    
+.icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.icon > svg {
+    fill: white;
+}
+
+
+.iconButton{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: 1px solid orangered;
+    background-color: orangered;    
+}
+.iconButton:hover{
+    background-color: inherit;
+    border: 1px solid orangered;
+    color: orangered;
+    
+}
+
+.iconButton:hover > .icon > svg {
+    fill: orangered;
+}
+
+.part{
+    margin-bottom: 10px;
+
+}
+
+.part>div{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.part > input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: inherit;
+    color: black;
+}
+
+.part > input:focus{
+    outline: none;
+}
+.part > input::placeholder{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.btn{
+    border: 1px solid white;
+    outline: none;
+    padding: 3px;
+    font-size: 18px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover{
+    border: 1px solid orangered;
+    background-color: white;
+    color: orangered;
+}
+
+.register{
+    
+    margin-top: 5px;
+    color:blue;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.register:hover{
+    color: rgb(0, 0, 139);
+}
+
+
+

@@ -1,0 +1,73 @@
+.container{
+    height: calc(100vh - 150px) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper {
+    padding: 50px;
+    border-radius: 10px;
+
+}
+
+.part{
+    margin-bottom: 10px;
+}
+
+.part>div{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.part > input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: inherit;
+    color: black;
+}
+
+.part > input:focus{
+    outline: none;
+}
+.part > input::placeholder{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.btn{
+    border: 1px solid white;
+    outline: none;
+    padding: 3px;
+    font-size: 18px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover{
+    border: 1px solid orangered;
+    background-color: white;
+    color: orangered;
+}
+
+.login{
+    
+    margin-top: 5px;
+    color:blue;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.login:hover{
+    color: rgb(0, 0, 139);
+}

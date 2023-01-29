@@ -1,0 +1,38 @@
+.continer {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 550px) {
+  .container {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    z-index: 10000;
+    transition: all 0.2s ease;
+    color: white;
+    background-color:white;
+    color:black;
+    left:0;
+    top:50px;
+  }
+
+  .wrapper{
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+
+  }
+
+  .link{
+    font-size:20px;
+    padding:5px 0px;
+    border-bottom:1px solid gray;
+    font-weight:bold;
+  }
+
+}
