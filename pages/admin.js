@@ -22,7 +22,6 @@ export default function Admin({count, posts}) {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    console.log("data", data)
     if (data === "success") {
       let url = "/admin"
       if (router.query.length > 0) {
@@ -44,7 +43,6 @@ export default function Admin({count, posts}) {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    console.log("data", data)
     if (data === "success") {
       let url = "/admin"
       if (router.query.length > 0) {
@@ -101,10 +99,8 @@ export default function Admin({count, posts}) {
 
 export const getServerSideProps = async (context) => {
   const token = await getToken({req:context.req})
-  console.log(token)
   if (!token || token.role !== "ADMIN") {
     // redirect
-    //console.log("!token || !admin")
     return {
       redirect: {
         destination: '/',
@@ -173,7 +169,6 @@ export const getServerSideProps = async (context) => {
     ],
     take: 100
   })
-  //console.log(posts)
   return {
     props: {count, posts}
   }

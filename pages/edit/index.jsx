@@ -19,10 +19,6 @@ export default function Editor({post}) {
   const [suggestedTags, setSuggestedTags] = useState([])
   const [tagsToSearch, setTagsToSearch] = useState(["Javascript","Java","Mongo"])
 
-  // useEffect(() => {
-  //   getSession().then((session) => {console.log(session)})
-  // }, [])
-
   const bottomRef = useRef();
   const router = useRouter()
 
@@ -81,7 +77,6 @@ export default function Editor({post}) {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    // console.log("data", data)
     if (data && "id" in data) {
       //setId(data.id)
       router.push('/author')
@@ -96,7 +91,6 @@ export default function Editor({post}) {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    // console.log("data", data)
     if (data && data.success) {
       //setId(data.id)
       router.push('/author')
@@ -132,7 +126,6 @@ export default function Editor({post}) {
 
   useEffect(() => {
     if (post) {
-      //console.log("post",post)
       setId(post.id)
       setTitle(post.title)
       setShort(post.short)
@@ -165,7 +158,6 @@ export default function Editor({post}) {
         bottomRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }
-    // console.log(contents)
   }, [contents]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
@@ -291,10 +283,8 @@ export default function Editor({post}) {
 export async function getServerSideProps(context) {
   const token = await getToken({req:context.req})
   // const postId = context.query.id
-  //console.log("postid", postId)
   if (!token) {
     // redirect
-    console.log("!token")
     return {
       redirect: {
         destination: '/',
@@ -302,25 +292,5 @@ export async function getServerSideProps(context) {
       },
     }
   }
-  // if (postId) {
-  //   const prisma = new PrismaClient();
-  //   const post = await prisma.Post.findUnique({
-  //     where: {
-  //       id: postId
-  //     },
-  //   });
-  //   if (post && post.authorId === token.sub) {
-  //     //console.log("post",post)
-  //     return {props:{post}}
-  //   } else {
-  //     return {
-  //       redirect: {
-  //         destination: '/404',
-  //         permanent: false,
-  //       },
-  //     }
-  //   }
-  // }
-  //console.log("end")
   return {props:{}}
 }

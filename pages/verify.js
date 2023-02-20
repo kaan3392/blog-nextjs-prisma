@@ -59,7 +59,6 @@ export async function getServerSideProps(context) {
       verified: true,
     }
   });
-  console.log(user)
   if (user && user.expire > Date.now()) {
     await prisma.User.update({
       where: {

@@ -187,9 +187,7 @@ export const getServerSideProps = async (context) => {
       take,
     });
   }
-  // console.log("count", count)
-  // console.log("posts", posts)
-  // console.log("date", Date.now())
+ 
   return {
     props: {count, posts, featured}
   }

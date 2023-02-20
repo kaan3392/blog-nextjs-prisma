@@ -85,6 +85,5 @@ export async function getServerSideProps(context) {
       allowed: true,
     }
   });
-  //console.log("posts", posts)
   return {props:{posts}}
 }

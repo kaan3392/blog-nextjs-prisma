@@ -26,10 +26,9 @@ export default function Reset({  }) {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    console.log("data", data)
     if (!data || data.error) {
       let error = data.error
-      console.log(error)
+      console.error(error)
       setError(error)
     } else {
       // başarılı yazdır
@@ -91,7 +90,6 @@ export async function getServerSideProps(context) {
       verified: true,
     }
   });
-  console.log(user)
   if (!user || user.expire <= Date.now()) {
     // redirect
     return {

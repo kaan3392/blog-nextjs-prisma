@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from "next-auth/next"
+import { getServerSession } from "next-auth/next"
 import { authOptions } from "./auth/[...nextauth]"
 import { PrismaClient } from "@prisma/client";
 
@@ -7,8 +7,8 @@ const prisma = new PrismaClient();
 async function clear(req, res) {
   try {
     if (req.method === "POST") {
-      const session = await unstable_getServerSession(req, res, authOptions)
-      if (!session || session.role !== "ADMIN") {
+      const session = await getServerSession(req, res, authOptions)
+      if (!session || session.user.role !== "ADMIN") {
         return res.status(400).json("unauthorized")
       }
       const {id} = req.body

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 const Cards = ({cards}) => {
-  useEffect(()=>{console.log("cards",cards)},[])
+
+
   const maxLength = 20
   const breakpointColumnsObj = {
     default: 4,

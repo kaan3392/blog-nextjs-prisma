@@ -4,9 +4,7 @@ import bcrypt from "bcryptjs"
 const prisma = new PrismaClient();
 
 async function login(req, res) {
-  console.log("1")
   if (req.method === "POST") {
-    console.log("2")
     const {username, password} = req.body
     if (!username || !password || username.length === 0 || password.length === 0) {
       // burada ayrıca email ve password arındır
@@ -25,7 +23,6 @@ async function login(req, res) {
         verified: true,
       }
     });
-    console.log("user", user)
     if (!user || !user.verified) {
       return res.status(400).json(null)
     }
@@ -34,10 +31,8 @@ async function login(req, res) {
       return res.status(400).json(null)
     }
     delete user["password"]
-    console.log("user2",user)
     return res.status(200).json(user)
   }
-  console.log("cikis")
   return res.status(400).json(null)
 }
 

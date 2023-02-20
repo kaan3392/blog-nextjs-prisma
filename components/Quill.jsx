@@ -81,7 +81,6 @@ export default function QuillComponent() {
 
   const sendContent = (quill) => {
     const delta = quill.getContents()
-    console.log(delta)
   }
 
   return (

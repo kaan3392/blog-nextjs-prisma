@@ -63,15 +63,7 @@ const Pagination = ({count}) => {
     for (let index = 0; index < afterTotal; index++) {
       newPages.push(page + index + 1)
     }
-    // console.log("count",count)
-    // console.log("size",size)
-    // console.log("total",total)
-    // console.log("before",before)
-    // console.log("after",after)
-    // console.log("beforeExtra",beforeExtra)
-    // console.log("afterExtra",afterExtra)
-    // console.log("beforeTotal",beforeTotal)
-    // console.log("afterTotal",afterTotal)
+   
     setPages(newPages)
   }, [page, size])
 

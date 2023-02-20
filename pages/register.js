@@ -18,10 +18,9 @@ export default function Register() {
       headers: { "Content-Type": "application/json" }
     })
     const data = await res.json()
-    console.log("data", data)
     if ("error" in data) {
       let error = data.error
-      console.log(error)
+      console.error(error)
       if (data.error === "user already defined") {
         
       }

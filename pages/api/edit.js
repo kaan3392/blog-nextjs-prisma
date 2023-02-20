@@ -39,28 +39,9 @@ async function edit(req, res) {
     if (!session) {
       return res.status(400).json("not loggedin")
     }
-    
-    // if (!session) {
-    //   console.log("user not connected")
-    //   //return res.status(400).json("user not connected")
-    // } else {
-    //   console.log("session", session)
-    //   //return res.status(200).json("user connected", session)
-    // }
-    // const token = await getToken({ req })
-    // if (!token) {
-    //   console.log("no token found")
-    //   return res.status(400).json("no token found")
-    // } else {
-    //   console.log("token", token)
-    //   return res.status(200).json("token found", token)
-    // }
-
-    const {id, title, short, image, story, content, tags} = req.body
-    //console.log(req.body)
+      const {id, title, short, image, story, content, tags} = req.body
     if (!title || !image || title.length === 0 || image.length === 0) {
-      // burada ayrıca title, image, id arındır
-      // image kontrol et
+    
       return res.status(400).json("missing main")
     }
     let post = null

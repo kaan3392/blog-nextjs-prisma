@@ -14,7 +14,6 @@ const Searchbar = () => {
       setSuggestions([])
     }
     const filterProducts = async () => {
-      // console.log("text",text)
       try {
         const body = {text: text}
         const res = await fetch("/api/search", {
@@ -24,9 +23,8 @@ const Searchbar = () => {
         })
         const data = await res.json()
         setSuggestions(data)
-        console.log("data", data)
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     };
     const timer = setTimeout(() => {
@@ -56,7 +54,6 @@ const Searchbar = () => {
   }
 
   useEffect(() => {
-    //console.log(suggestions)
     setText("")
     setSuggestions([])
   }, [router])

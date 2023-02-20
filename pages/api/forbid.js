@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from "next-auth/next"
+import { getServerSession, unstable_getServerSession } from "next-auth/next"
 import { authOptions } from "./auth/[...nextauth]"
 import { PrismaClient } from "@prisma/client";
 
@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 async function forbid(req, res) {
   try {
     if (req.method === "POST") {
-      const session = await unstable_getServerSession(req, res, authOptions)
+      const session = await getServerSession(req, res, authOptions)
       if (!session || session.role !== "ADMIN") {
         return res.status(400).json("unauthorized")
       }
