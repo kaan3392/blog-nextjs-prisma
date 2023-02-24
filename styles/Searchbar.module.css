@@ -9,7 +9,7 @@
   border: 1px solid gray;
   border-radius: 5px;
   padding: 5px;
-  background-color: orangered;
+  background-color: #7313FF;
   position: relative;
 }
 .suggestions {
@@ -28,7 +28,7 @@
   padding: 2.5px 5px;
 }
 .suggestion:hover {
-  background-color: orangered;
+  background-color: #7313FF;
   color: white;
 }
 
@@ -49,14 +49,14 @@
     border-radius: 5px;
     cursor: pointer;
     background-color: inherit;
-    color: orangered;
-    border: 1px solid orangered;
+    color: #7313FF;
+    border: 1px solid #7313FF;
     font-weight: bold;
 
 }
 
 .button:hover{
-    background-color: orangered;
+    background-color: #7313FF;
     color:white;
 }
 
@@ -72,7 +72,7 @@
         border: 1px solid gray;
         border-radius: 5px;
         padding: 5px;
-        background-color: orangered;
+        background-color: #7313FF;
         position: relative;
         flex-grow:1;
       }

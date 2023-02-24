@@ -11,6 +11,7 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const { toggleMenu, menu } = useContext(MenuContext);
+  console.log(session);
 
   return (
     <div className={styles.navbar}>
@@ -21,12 +22,17 @@ const Navbar = () => {
           </Link>
           <div className={styles.links}>
             {session && (
-              <Link href="/author">
-                <div className={styles.link}>author</div>
-              </Link>
+              <>
+                <Link href="/author">
+                  <div className={styles.link}>author</div>
+                </Link>
+                {session.user.role === "ADMIN" && (
+                  <Link href="/admin">
+                    <div className={styles.link}>admin</div>
+                  </Link>
+                )}
+              </>
             )}
-            {/* <div className={styles.link}>features</div> */}
-            {/* <div className={styles.link}>about</div> */}
           </div>
         </div>
         <div className={styles.right}>

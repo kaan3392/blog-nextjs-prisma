@@ -28,6 +28,7 @@
 
 .short{
     font-size: 18px;
+    white-space:pre-line
 }
 .others{
     display: flex;

@@ -71,7 +71,6 @@ export async function getServerSideProps(context) {
     where: {
       id: id,
     },
-    //select: {}
   });
   const similar = await prisma.Post.findMany({
     where: {

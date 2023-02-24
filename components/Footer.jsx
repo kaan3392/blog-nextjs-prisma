@@ -19,15 +19,6 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <Ticker messages={["Welcome to our demonstration of a blog.", "You can search our current pages in the searchbar.", "Some of the available pages are: Title One, Title Two..."]} />
-      {/* <div className={styles.wrapper}>
-        <button
-          onClick={goToTop}
-          disabled={disableOption}
-          className={styles.top}
-        >
-          go to top
-        </button>
-      </div> */}
     </div>
   );
 };

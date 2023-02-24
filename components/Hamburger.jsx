@@ -20,6 +20,11 @@ function Hamburger() {
             <Link onClick={toggleMenu} href="/author">
               <div className={styles.link}>Author</div>
             </Link>
+            {session.user.role === "ADMIN" && (
+              <Link onClick={toggleMenu} href="/admin">
+                <div className={styles.link}>Admin</div>
+              </Link>
+            )}
             <div
               className={styles.link}
               onClick={() => {

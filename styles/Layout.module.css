@@ -1,0 +1,7 @@
+.hamburger {
+  display: none;
+
+  @media only screen and (max-width: 550px) {
+    display: block;
+  }
+}

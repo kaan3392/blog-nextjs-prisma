@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Register.module.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { getToken } from "next-auth/jwt"
 
 export default function Register() {
   const nameRef = useRef()
   const mailRef = useRef()
   const passRef = useRef()
+  const [error, setError] = useState(null)
 
   const tryRegister = async (e) => {
     e.preventDefault()
@@ -19,11 +20,10 @@ export default function Register() {
     })
     const data = await res.json()
     if ("error" in data) {
-      let error = data.error
-      console.error(error)
-      if (data.error === "user already defined") {
-        
-      }
+        setError(data.error)
+        setTimeout(() =>{
+          setError(null)
+        }, 4000)
     }
   }
 
@@ -54,6 +54,7 @@ export default function Register() {
               <div className={styles.login} >I already have an account</div>
             </Link>
           </form>
+          {error && <div className={error ? styles.error: styles.not_error} >{error}</div>}
         </div>
       </div>
     </div>

@@ -72,7 +72,6 @@ const urlType = (url) => {
 }
 
 const Post = ({post}) => {
-  const [width, setWidth] = useState(100)
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -80,7 +79,7 @@ const Post = ({post}) => {
         <div className={styles.imageCon}>
           <img className={styles.image} src={post.embed} alt="" />
         </div>
-        <p className={styles.short}>{post.short}</p>
+        <p className={styles.short}>{post.story}</p>
       </div>
       <div className={styles.others}>
         {post.content.map((part, i) => (
@@ -89,17 +88,18 @@ const Post = ({post}) => {
             <div className={styles.imageCon}>
               {/* <img className={styles.image} src={part.embed} alt="" /> */}
               <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", width:"100%"}}>
-                {(part.embed && urlType(part.embed) === "image") && <div style={{zIndex:4, position:"relative", width:"100%", aspectRatio:1.77, backgroundColor:"black", backgroundPosition:'center', backgroundRepeat:"no-repeat", backgroundSize:'cover', backgroundImage:'url("'+part.embed+'")', cursor:"pointer"}} >
+                {(part.embed && urlType(part.embed) === "image") && <div style={{zIndex:0, position:"relative", width:"100%", aspectRatio:1.77, backgroundColor:"black", backgroundPosition:'center', backgroundRepeat:"no-repeat", backgroundSize:'cover', backgroundImage:'url("'+part.embed+'")', cursor:"pointer"}} >
                   <div style={{zIndex:5, position:"absolute", width:"100%", aspectRatio:1.77, backgroundColor:"rgba(0,0,0,0.75)", backgroundPosition:'center', backgroundRepeat:"no-repeat", backgroundSize:'contain', backgroundImage:'url("'+part.embed+'")', cursor:"pointer"}} />
                 </div>}
-                {(part.embed && urlType(part.embed) === "video") && <video style={{zIndex:4, width:"100%", aspectRatio:1.77, backgroundColor:"black"}} width="100%" controls ><source src={part.embed} /></video>}
-                {(part.embed && urlType(part.embed) === "audio") && <audio style={{zIndex:4, width:"100%", aspectRatio:1.77, backgroundColor:"black"}} controls ><source src={part.embed} /></audio>}
-                {(part.embed && !((urlType(part.embed)).match(/^(unknown|image|video|audio)$/))) && <iframe title={part.title} style={{zIndex:4, width:"100%", aspectRatio:1.77, backgroundColor:"black", border:0}} src={urlType(part.embed)} frameBorder="0" allow="fullscreen; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>}
+                {(part.embed && urlType(part.embed) === "video") && <video style={{zIndex:0, width:"100%", aspectRatio:1.77, backgroundColor:"black"}} width="100%" controls ><source src={part.embed} /></video>}
+                {(part.embed && urlType(part.embed) === "audio") && <audio style={{zIndex:0, width:"100%", aspectRatio:1.77, backgroundColor:"black"}} controls ><source src={part.embed} /></audio>}
+                {(part.embed && !((urlType(part.embed)).match(/^(unknown|image|video|audio)$/))) && <iframe title={part.title} style={{zIndex:0, width:"100%", aspectRatio:1.77, backgroundColor:"black", border:0}} src={urlType(part.embed)} frameBorder="0" allow="fullscreen; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>}
               </div>
             </div>
             <p className={styles.short}>{part.story}</p>
           </div>
         ))}
+        <div style={{margin:"30px"}}></div>
       </div>
     </div>
   );
