@@ -25,7 +25,7 @@ export default function Verify({ name }) {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           {name ?
-            <div>Welcome {name}! You are being redirected to login page...</div>
+            <div>Welcome {name}! You are being redirected to login page.</div>
             :
             <div>error</div>
           }
